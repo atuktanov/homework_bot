@@ -78,7 +78,6 @@ def main():
         raise NameError(message)
     bot = telegram.Bot(token=TELEGRAM_TOKEN)
     current_timestamp = int(time.time())
-    current_timestamp -= 60 * 24 * 60 * 60
     old_message = ''
     while True:
         try:
