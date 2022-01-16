@@ -19,7 +19,7 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 RETRY_TIME = 600
-ENDPOINT = 'https://practicum.yandex.ru/api/user_api/homework_statuses/'
+ENDPOINT = 'https://practicum2.yandex.ru/api/user_api/homework_statuses/'
 HEADERS = {'Authorization': f'OAuth {PRACTICUM_TOKEN}'}
 
 
@@ -89,6 +89,10 @@ def get_api_answer(current_timestamp):
             'Сетевая ошибка при подключении к серверу домашки')
     except json.decoder.JSONDecodeError:
         raise exceptions.JSONDecodeError('Ошибка декодирования JSON')
+    except exceptions.HTTPError:
+        raise
+    except Exception as e:
+        raise Exception(f'Другая ошибка при запросе к API: {e}')
 
 
 def check_response(response):
