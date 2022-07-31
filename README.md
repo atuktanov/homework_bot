@@ -8,16 +8,19 @@
 Python, REST API
 
 ### Запуск проекта сервере:
-Склонировать репозиторий  
+Склонировать репозиторий
+```
+git clone https://github.com/atuktanov/homework_bot
+```
 Установить зависимости
 ```
 pip install -r requirements.txt
 ```
 Создат .env-файл со следуюшим содержимым
 ```
-PRACTICUM_TOKEN = <Токен Yandex.Practicum>
-TELEGRAM_TOKEN = <Токен телеграмм-бота>
-TELEGRAM_CHAT_ID = <ID телеграмм-чата для отпраувки сообщения>
+PRACTICUM_TOKEN=<Токен Yandex.Practicum>
+TELEGRAM_TOKEN=<Токен телеграмм-бота>
+TELEGRAM_CHAT_ID=<ID телеграмм-чата для отпраувки сообщения>
 ```
 
 ### Автор:
